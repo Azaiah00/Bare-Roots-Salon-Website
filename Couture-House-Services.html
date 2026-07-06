@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Couture House Co. × Bare Roots — What We Build</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{--forest:#2E3F28;--sage:#93A052;--mauve:#806172;--plum:#372C41;--gold:#C9A15A;--gold-lite:#E7CE9A;--gold-deep:#A67C33;--cream:#F5F0E6;--paper:#FBF8F1;--ink:#1c1518;--serif:'Cormorant Garamond',serif;--sans:'Jost',sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:500;line-height:1.1}
+.wrap{max-width:1080px;margin:0 auto;padding:0 30px}
+.eyebrow{font-weight:500;letter-spacing:.3em;text-transform:uppercase;font-size:11px;color:var(--gold-deep)}
+.gline{display:inline-block;width:46px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);vertical-align:middle;margin:0 10px}
+.btn{display:inline-block;font-weight:500;letter-spacing:.14em;text-transform:uppercase;font-size:12px;padding:15px 30px;border-radius:2px;background:linear-gradient(135deg,var(--gold-deep),var(--gold),var(--gold-lite));color:#241a0b}
+/* HERO */
+.hero{background:radial-gradient(120% 120% at 70% 0%,var(--plum),var(--forest) 60%);color:var(--cream);padding:90px 0 80px;text-align:center;position:relative;overflow:hidden}
+.hero .badge{display:inline-block;border:1px solid rgba(201,161,90,.4);color:var(--gold-lite);font-size:11px;letter-spacing:.24em;text-transform:uppercase;padding:8px 18px;border-radius:30px;margin-bottom:24px}
+.hero h1{font-size:clamp(40px,6vw,74px)}.hero h1 em{font-style:italic;color:var(--gold-lite)}
+.hero p{max-width:620px;margin:22px auto 0;color:rgba(245,240,230,.82);font-size:18px;font-weight:300}
+.hero .who{margin-top:30px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+/* SECTION */
+section{padding:80px 0}
+.head{text-align:center;max-width:640px;margin:0 auto 50px}
+.head h2{font-size:clamp(30px,4.4vw,50px);color:var(--forest);margin:14px 0}
+.head p{color:#5c5057;font-size:16px;font-weight:300}
+/* WHAT WE DELIVERED */
+.delivered{background:var(--cream)}
+.dgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.dcard{background:#fff;border:1px solid #ece3d5;border-radius:8px;padding:28px;display:flex;gap:18px;align-items:flex-start}
+.dcard .n{font-family:var(--serif);font-size:34px;color:var(--gold);line-height:1;flex:none}
+.dcard h4{font-size:22px;color:var(--forest)}
+.dcard p{font-size:14px;color:#5c5057;font-weight:300;margin-top:5px}
+.tagline{text-align:center;font-family:var(--serif);font-style:italic;font-size:26px;color:var(--mauve);margin-top:44px}
+/* SERVICES */
+.svcs{background:var(--paper)}
+.sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.svc{border:1px solid #ece3d5;border-radius:8px;padding:28px;background:#fff;transition:.4s;position:relative;overflow:hidden}
+.svc::before{content:'';position:absolute;left:0;top:0;height:100%;width:3px;background:linear-gradient(var(--gold),var(--gold-deep));transform:scaleY(0);transform-origin:top;transition:.4s}
+.svc:hover{transform:translateY(-5px);box-shadow:0 30px 60px -34px rgba(55,44,65,.35)}.svc:hover::before{transform:scaleY(1)}
+.svc .ic{font-size:24px;margin-bottom:12px}
+.svc h4{font-size:21px;color:var(--forest)}
+.svc p{font-size:13.5px;color:#5c5057;font-weight:300;margin-top:8px}
+.svc .price{margin-top:14px;font-family:var(--serif);font-style:italic;font-size:18px;color:var(--gold-deep)}
+/* PACKAGES */
+.pkgs{background:linear-gradient(180deg,var(--forest),#25321f);color:var(--cream)}
+.pkgs .head h2{color:var(--cream)}.pkgs .head p{color:rgba(245,240,230,.72)}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+.pkg{border:1px solid rgba(201,161,90,.28);border-radius:10px;padding:34px 28px;background:rgba(245,240,230,.04);display:flex;flex-direction:column}
+.pkg.feat{border-color:var(--gold);background:linear-gradient(180deg,rgba(201,161,90,.14),rgba(201,161,90,.04));transform:scale(1.03)}
+.pkg .k{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.pkg h3{font-size:28px;color:var(--cream);margin:10px 0 4px}
+.pkg .p{font-family:var(--serif);font-style:italic;font-size:30px;color:var(--gold-lite);margin-bottom:16px}
+.pkg ul{list-style:none;margin-top:6px;flex:1}
+.pkg li{font-size:13.5px;color:rgba(245,240,230,.82);font-weight:300;padding:7px 0 7px 22px;position:relative;border-bottom:1px solid rgba(245,240,230,.08)}
+.pkg li::before{content:'✦';position:absolute;left:0;color:var(--gold)}
+.pkg .tag{margin-top:8px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-lite)}
+.feat-badge{display:inline-block;background:var(--gold);color:#241a0b;font-size:10px;letter-spacing:.16em;text-transform:uppercase;padding:5px 12px;border-radius:20px;margin-bottom:10px;font-weight:600}
+/* ADDONS */
+.addons{background:var(--paper)}
+.arow{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;max-width:900px;margin:0 auto}
+.addons .a{border:1px solid var(--mauve);color:var(--mauve);border-radius:30px;padding:11px 20px;font-size:13px;background:#fff}
+.addons .a b{color:var(--gold-deep);font-family:var(--serif);font-style:italic}
+/* CTA */
+.cta{background:linear-gradient(135deg,var(--plum),var(--mauve));color:var(--cream);text-align:center;padding:90px 0}
+.cta h2{font-size:clamp(30px,4.4vw,52px)}.cta h2 em{font-style:italic;color:var(--gold-lite)}
+.cta p{max-width:520px;margin:16px auto 30px;color:rgba(245,240,230,.85);font-weight:300}
+footer{background:var(--ink);color:rgba(245,240,230,.6);text-align:center;padding:34px;font-size:12px;letter-spacing:.06em}
+footer b{color:var(--gold);font-family:var(--serif);font-style:normal;letter-spacing:.1em}
+@media(max-width:860px){.dgrid,.sgrid,.pgrid{grid-template-columns:1fr}.pkg.feat{transform:none}}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="badge">Couture House Co. × Bare Roots</div>
+    <h1>We don't build sites.<br/>We build <em>empires.</em></h1>
+    <p>What you're looking at today — the brand, the logos, the full luxury website — we made in a fraction of the time it takes most agencies to answer an email. Here's everything Couture House Co. can do to make Bare Roots the salon your competition studies.</p>
+    <div class="who">A private capabilities walkthrough</div>
+  </div>
+</section>
+
+<section class="delivered">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow"><span class="gline"></span>Already In Your Hands<span class="gline"></span></div>
+      <h2>What We Built for Bare Roots</h2>
+      <p>Not a pitch deck of promises — a finished demo. This is your starting line, not the finish.</p>
+    </div>
+    <div class="dgrid">
+      <div class="dcard"><div class="n">01</div><div><h4>Full Brand Identity</h4><p>Story, positioning, voice, color system, typography, motion language and a three-tier logo + sub-brand architecture (Bare Roots, DOPE HAIR, Wraps).</p></div></div>
+      <div class="dcard"><div class="n">02</div><div><h4>Logo Suite</h4><p>Three custom directions (root emblem, BR monogram, wordmark) plus a DOPE HAIR product-brand mark — designed, not templated.</p></div></div>
+      <div class="dcard"><div class="n">03</div><div><h4>Luxury Website</h4><p>A complete, animated, shoppable demo — two artists, full service menus, hair-recovery funnel, two stores with live cart, academy, gallery and booking.</p></div></div>
+      <div class="dcard"><div class="n">04</div><div><h4>Editorial Photography</h4><p>A full set of AI-generated brand visuals in your palette — ready to swap for real shoots when you are.</p></div></div>
+    </div>
+    <div class="tagline">"Rooted in culture. Crowned in gold."</div>
+  </div>
+</section>
+
+<section class="svcs">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow"><span class="gline"></span>The Full Menu<span class="gline"></span></div>
+      <h2>Everything We Can Do</h2>
+      <p>One team for your entire digital presence — so your brand is consistent everywhere money is made.</p>
+    </div>
+    <div class="sgrid">
+      <div class="svc"><div class="ic">🌿</div><h4>Brand Identity</h4><p>Naming, logo, color, type, voice and full brand guidelines that make you unforgettable.</p></div>
+      <div class="svc"><div class="ic">💻</div><h4>Luxury Websites</h4><p>Custom, motion-rich, mobile-perfect sites built to convert lookers into booked clients.</p></div>
+      <div class="svc"><div class="ic">🛍️</div><h4>E-Commerce</h4><p>Sell Inflúance, DOPE HAIR & wraps online with real cart, checkout and inventory.</p></div>
+      <div class="svc"><div class="ic">📅</div><h4>Booking Integration</h4><p>Seamless GlossGenius / consultation flows and deposit capture, on-brand end to end.</p></div>
+      <div class="svc"><div class="ic">🔍</div><h4>Local SEO</h4><p>Rank for "micro locs Richmond," "hair loss recovery RVA" and more. Get found first.</p></div>
+      <div class="svc"><div class="ic">🎬</div><h4>Content & Motion</h4><p>Higgsfield video, Reels, product shots and frame-by-frame scroll storytelling.</p></div>
+      <div class="svc"><div class="ic">🎓</div><h4>Course & Academy Builds</h4><p>Turn your teaching into scalable income — masterclasses, workshops, certifications.</p></div>
+      <div class="svc"><div class="ic">✍️</div><h4>Sales Copy & Funnels</h4><p>Psychology-driven copy and funnels engineered to grow revenue, not just look pretty.</p></div>
+      <div class="svc"><div class="ic">📈</div><h4>Growth & Retention</h4><p>Email/SMS flows, loyalty, and blog content that keep clients coming back.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="pkgs">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow"><span class="gline"></span>Ways to Work Together<span class="gline"></span></div>
+      <h2>Choose Your Crown</h2>
+      <p>Illustrative packages to frame the conversation — we tailor to exactly what Bare Roots needs.</p>
+    </div>
+    <div class="pgrid">
+      <div class="pkg">
+        <div class="k">Foundation</div>
+        <h3>The Root</h3>
+        <div class="p">Launch Site</div>
+        <ul>
+          <li>Brand identity + logo suite</li>
+          <li>Luxury one-page or 5-page site</li>
+          <li>Booking + basic product showcase</li>
+          <li>Local SEO setup</li>
+          <li>Mobile-perfect & fast</li>
+        </ul>
+        <div class="tag">Get online, beautifully</div>
+      </div>
+      <div class="pkg feat">
+        <div class="feat-badge">Recommended</div>
+        <div class="k">Signature</div>
+        <h3>The Crown</h3>
+        <div class="p">Full Empire</div>
+        <ul>
+          <li>Everything in The Root</li>
+          <li>Full e-commerce (2 stores + wraps)</li>
+          <li>Hair-recovery funnel + consultation flows</li>
+          <li>Motion, video & editorial content</li>
+          <li>Academy / course platform</li>
+          <li>Email + SMS growth funnels</li>
+        </ul>
+        <div class="tag">The full Bare Roots experience</div>
+      </div>
+      <div class="pkg">
+        <div class="k">Partnership</div>
+        <h3>The Legacy</h3>
+        <div class="p">Growth Retainer</div>
+        <ul>
+          <li>Everything in The Crown</li>
+          <li>Ongoing content & campaigns</li>
+          <li>New products & course launches</li>
+          <li>Monthly optimization & reporting</li>
+          <li>Priority creative on demand</li>
+        </ul>
+        <div class="tag">We grow with you</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="addons">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow"><span class="gline"></span>Add Anytime<span class="gline"></span></div>
+      <h2>À La Carte Upgrades</h2>
+    </div>
+    <div class="arow">
+      <div class="a"><b>Higgsfield</b> brand video</div>
+      <div class="a"><b>Product</b> photography</div>
+      <div class="a"><b>Course</b> platform</div>
+      <div class="a"><b>Blog</b> + content engine</div>
+      <div class="a"><b>Loyalty</b> program</div>
+      <div class="a"><b>Email/SMS</b> automation</div>
+      <div class="a"><b>Custom</b> domain + email</div>
+      <div class="a"><b>Social</b> content packs</div>
+      <div class="a"><b>Reviews</b> & reputation</div>
+      <div class="a"><b>Analytics</b> dashboard</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Let's crown <em>Bare Roots.</em></h2>
+    <p>You've seen what we do before you even said yes. Imagine what we build once we're partners.</p>
+    <a href="#" class="btn">Start With Couture House Co.</a>
+  </div>
+</section>
+
+<footer>
+  <b>COUTURE HOUSE CO.</b> &nbsp;·&nbsp; Brand · Web · Commerce · Content &nbsp;·&nbsp; Prepared for Bare Roots Salon · 2026
+</footer>
+
+</body>
+</html>

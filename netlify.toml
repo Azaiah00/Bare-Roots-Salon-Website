@@ -1,0 +1,22 @@
+# Netlify config — Bare Roots Salon Website
+#
+# CURRENT STATE: Next.js 14 app (App Router). The official Next runtime plugin
+# handles the build output, SSR/ISR and image optimization automatically.
+#
+# NOTE: the original single-file demo still lives at /index.html as the visual
+# source of truth; it is not what Netlify publishes anymore.
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Nice-to-have security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

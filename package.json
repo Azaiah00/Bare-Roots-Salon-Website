@@ -1,13 +1,18 @@
 {
   "name": "bare-roots-salon",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
-  "description": "Bare Roots — luxury natural-hair & wellness salon, Richmond VA. Natural · Luxury · Culture.",
+  "description": "Bare Roots — luxury natural-hair & wellness house, Henrico / Richmond VA. Natural · Luxury · Culture. Built by Couture House Co.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "audit:contrast": "node scripts/audit-contrast.mjs",
+    "audit:a11y": "node scripts/audit-a11y.mjs",
+    "audit:flow": "node scripts/audit-flow.mjs",
+    "frames": "node scripts/frames.mjs",
+    "audit": "npm run lint && npm run audit:contrast && npm run audit:a11y && npm run audit:flow"
   },
   "dependencies": {
     "framer-motion": "^11.3.19",

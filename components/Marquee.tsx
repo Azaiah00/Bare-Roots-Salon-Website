@@ -1,27 +1,13 @@
-const ITEMS: [string, boolean][] = [
-  ["Micro Locs", true],
-  ["Sisterlocs", false],
-  ["Holistic Hair Recovery", true],
-  ["Traditional Locs", false],
-  ["Silk Press", true],
-  ["Color", false],
-  ["Loc Artistry", true],
-  ["Wellness", false],
-];
-
-export default function Marquee() {
-  return (
-    <div className="marquee" aria-hidden="true">
-      <div className="track">
-        {[0, 1].map((dup) =>
-          ITEMS.map(([label, strong], i) => (
-            <span key={`${dup}-${i}`}>
-              {strong ? <b>{label}</b> : label}
-              <span style={{ margin: "0 12px" }}>·</span>
-            </span>
-          )),
-        )}
-      </div>
-    </div>
-  );
-}
+/**
+ * DEPRECATED — safe to delete.
+ *
+ * This component belonged to the original single-page build. Its replacement
+ * lives in components/{chrome,home,brand,ui,cart,work}/ and nothing imports
+ * this file any more.
+ *
+ * It is left here as an empty module rather than deleted from the repo because
+ * the rebuild was delivered over the top of the existing folder and deleting
+ * files was not possible from that side. Remove components/Marquee.tsx whenever
+ * you like — the build does not reference it.
+ */
+export {};

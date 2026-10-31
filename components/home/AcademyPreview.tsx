@@ -14,7 +14,7 @@ export default function AcademyPreview() {
         <Reveal className="relative overflow-hidden rounded-panel">
           <div className="relative aspect-[4/3]">
             <Image
-              src="/img/academy.webp"
+              src="/img/academy.jpg"
               alt="A teaching session in a bright studio — one educator at the chair, a small group seated with notes."
               fill
               sizes="(min-width: 1024px) 44vw, 92vw"

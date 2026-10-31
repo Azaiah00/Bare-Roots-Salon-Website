@@ -47,7 +47,7 @@ export const SITE = {
       instagramUrl: "https://instagram.com/i.c.beautybrand",
       /** Iisha's own accessory line. Not yet shipping — see lib/products.ts. */
       subBrand: "DOPE HAIR",
-      photo: "/img/artist-iisha.png",
+      photo: "/img/artist-iisha.webp",
       disciplines: ["recovery"] as const,
     },
     {
@@ -62,7 +62,7 @@ export const SITE = {
       instagram: "@ladyybri_xo",
       instagramUrl: "https://instagram.com/ladyybri_xo",
       subBrand: "Custom Wraps",
-      photo: "/img/artist-sabrina.png",
+      photo: "/img/artist-sabrina.webp",
       disciplines: ["loc", "natural"] as const,
     },
   ],
